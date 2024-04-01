@@ -91,8 +91,8 @@ FEATURE=i3d_resnet
 ROOTPATH=$HOME/VisualSearch
 MODELDIR=checkpoint_tvr
 
-wget http://8.210.46.84:8787/prvr/checkpoints/checkpoint_tvr.tar
-tar -xvf checkpoint_tvr.tar -C $ROOTPATH/$DATASET/results
+wget http://8.210.46.84:8787/prvr/checkpoints/ms_slpp_checkpoint_tvr.tar
+tar -xvf ms_slpp_checkpoint_tvr.tar -C $ROOTPATH/$DATASET/results
 
 ./do_test.sh $DATASET $FEATURE $ROOTPATH $MODELDIR
 ```
@@ -105,9 +105,9 @@ tar -xvf checkpoint_tvr.tar -C $ROOTPATH/$DATASET/results
 
 |             | R@1  | R@5  | R@10 | R@100 | SumR  |
 | :---------: | :--: | :--: | :--: | :---: | :---: |
-| Text-to-Video | 13.5 | 32.1 | 43.4 | 83.4  | 172.3 |
+| Text-to-Video | 13.6 | 33.1 | 44.2 | 83.5  | 174.5 |
 
-## MS-SL on Activitynet
+## MS-SL++ on Activitynet
 ### Required Data
 Run the following script to download the video feature and text feature of the Activitynet dataset and place them in the specified path. The data can also be downloaded from [Baidu pan](https://pan.baidu.com/s/1UNu67hXCbA6ZRnFVPVyJOA?pwd=8bh4). Please refer to [here](https://github.com/HuiGuanLab/ms-sl/tree/main/dataset) for more description of the dataset.
 
@@ -119,12 +119,12 @@ tar -xvf activitynet.tar
 ```
 
 ### Training
-Run the following script to train `MS-SL` network on Activitynet.
+Run the following script to train `MS-SL++` network on Activitynet.
 ```
 #Add project root to PYTHONPATH (Note that you need to do this each time you start a new session.)
 source setup.sh
 
-conda activate ms-sl
+conda activate ms_sl_pp
 
 ROOTPATH=$HOME/VisualSearch
 RUN_ID=runs_0
@@ -151,8 +151,8 @@ FEATURE=i3d
 ROOTPATH=$HOME/VisualSearch
 MODELDIR=checkpoint_activitynet
 
-wget http://8.210.46.84:8787/prvr/checkpoints/checkpoint_activitynet.tar
-tar -xvf checkpoint_activitynet.tar -C $ROOTPATH/$DATASET/results
+wget http://8.210.46.84:8787/prvr/checkpoints/ms_slpp_checkpoint_activitynet.tar
+tar -xvf ms_slpp_checkpoint_activitynet.tar -C $ROOTPATH/$DATASET/results
 
 ./do_test.sh $DATASET $FEATURE $ROOTPATH $MODELDIR
 ```
@@ -161,7 +161,7 @@ tar -xvf checkpoint_activitynet.tar -C $ROOTPATH/$DATASET/results
 
 |             | R@1  | R@5  | R@10 | R@100 | SumR  |
 | :---------: | :--: | :--: | :--: | :---: | :---: |
-| Text-to-Video | 7.1 | 22.5 | 34.7 | 75.8  | 140.1 |
+| Text-to-Video | 7.0 | 23.1 | 35.2 | 75.8  | 141.1 |
 
 ## MS-SL on Charades-STA
 
@@ -176,13 +176,13 @@ tar -xvf charades.tar
 ```
 
 ### Training
-Run the following script to train `MS-SL` network on Charades-STA.
+Run the following script to train `MS-SL++` network on Charades-STA.
 
 ```
 #Add project root to PYTHONPATH (Note that you need to do this each time you start a new session.)
 source setup.sh
 
-conda activate ms-sl
+conda activate ms_sl_pp
 
 ROOTPATH=$HOME/VisualSearch
 RUN_ID=runs_0
@@ -208,8 +208,8 @@ FEATURE=i3d_rgb_lgi
 ROOTPATH=$HOME/VisualSearch
 MODELDIR=checkpoint_charades
 
-wget http://8.210.46.84:8787/prvr/checkpoints/checkpoint_charades.tar
-tar -xvf checkpoint_charades.tar -C $ROOTPATH/$DATASET/results
+wget http://8.210.46.84:8787/prvr/checkpoints/ms_slpp_checkpoint_charades.tar
+tar -xvf ms_sl_pp_checkpoint_charades.tar -C $ROOTPATH/$DATASET/results
 
 ./do_test.sh $DATASET $FEATURE $ROOTPATH $MODELDIR
 ```
@@ -218,7 +218,7 @@ tar -xvf checkpoint_charades.tar -C $ROOTPATH/$DATASET/results
 
 |             | R@1  | R@5  | R@10 | R@100 | SumR  |
 | :---------: | :--: | :--: | :--: | :---: | :---: |
-| Text-to-Video | 1.8 | 7.1 | 11.8 | 47.7  | 68.4 |
+| Text-to-Video | 1.8 | 7.6 | 12.0 | 48.4  | 69.7 |
 
 ## Reference
 ```
