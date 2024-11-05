@@ -1,4 +1,4 @@
-# Partially Relevant Video Retrieval
+# PRVR: Partially Relevant Video Retrieval
 
 ## Table of Contents
 
