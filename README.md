@@ -161,7 +161,7 @@ tar -xvf ms_slpp_checkpoint_activitynet.tar -C $ROOTPATH/$DATASET/results
 | :---------: | :--: | :--: | :--: | :---: | :---: |
 | Text-to-Video | 7.0 | 23.1 | 35.2 | 75.8  | 141.1 |
 
-## MS-SL on Charades-STA
+## MS-SL++ on Charades-STA
 
 ### Required Data
 The data can be downloaded from [Baidu pan](https://pan.baidu.com/s/1UNu67hXCbA6ZRnFVPVyJOA?pwd=8bh4) or [Google drive](https://drive.google.com/drive/folders/11dRUeXmsWU25VMVmeuHc9nffzmZhPJEj?usp=sharing). Please refer to [here](https://github.com/HuiGuanLab/ms-sl/tree/main/dataset) for more description of the dataset. Run the following script to place the data in the specified path.
